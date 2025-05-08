@@ -20,4 +20,8 @@ router.post('/staff/complaints/:id/resolve', isAuthenticated, staffOnly, proofPh
 router.delete('/warden/complaints/:id', isAuthenticated, wardenOnly,
     complaintController.deleteComplaint);
 
+// New: Warden can list all complaints
+router.get('/warden/complaints', isAuthenticated, wardenOnly,
+        complaintController.listAllComplaints);
+
 module.exports = router;

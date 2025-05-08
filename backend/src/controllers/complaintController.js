@@ -39,6 +39,24 @@ exports.listPendingComplaints = async (req, res) => {
     }
 };
 
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// New: WARDEN/ADMIN should see all complaints, regardless of status or user
+exports.listAllComplaints = async (req, res) => {
+        try {
+            // fetch every complaint in the collection
+            const complaints = await Complaint.find()
+                .populate('raisedBy', 'name')
+                .populate('assignedTo', 'name');
+            res.json(complaints);
+        } catch (error) {
+            res.status(500).json({ error: 'Failed to fetch all complaints' });
+        }
+    };
+
+
+
 exports.resolveComplaint = async (req, res) => {
     try {
         const complaint = await Complaint.findById(req.params.id);
