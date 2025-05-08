@@ -1,0 +1,27 @@
+<!-- This is the HTML template for displaying complaint details and resolving a complaint -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Detail</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/forms.css">
+</head>
+<body>
+    <div class="container">
+        <div id="complaint-details">
+            <!-- Complaint details will be inserted here via JS -->
+        </div>
+        <form id="resolveForm" class="resolve-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="proofPhoto">Upload Proof Photo:</label>
+                <input type="file" id="proofPhoto" name="proofPhoto" accept="image/*" required>
+            </div>
+            <button type="submit">Mark as Resolved</button>
+        </form>
+    </div>
+    <script src="/js/utils.js"></script>
+    <script src="/js/complaints.js"></script>
+</body>
+</html>

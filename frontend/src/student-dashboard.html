@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="dashboard-nav">
+            <h1>Welcome <span id="studentName"></span></h1>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </nav>
+        <div class="dashboard-actions">
+            <a href="/complaint-form.html" class="action-btn">Raise New Complaint</a>
+            <a href="/complaint-list.html" class="action-btn">View My Complaints</a>
+        </div>
+        <div id="complaints-container"></div>
+    </div>
+    <script src="/js/utils.js"></script>
+    <script src="/js/complaints.js"></script>
+</body>
+</html>

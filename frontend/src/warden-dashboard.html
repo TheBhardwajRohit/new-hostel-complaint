@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warden Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="dashboard-nav">
+            <h1>Welcome Admin</h1>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </nav>
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <span id="pending-count">0</span>
+            </div>
+            <div class="stat-card">
+                <h3>Active</h3>
+                <span id="active-count">0</span>
+            </div>
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <span id="resolved-count">0</span>
+            </div>
+        </div>
+        <div class="tab-container">
+            <button class="tab-btn active" data-tab="pending">Pending</button>
+            <button class="tab-btn" data-tab="active">Active</button>
+            <button class="tab-btn" data-tab="history">History</button>
+        </div>
+        <div id="complaints-list" class="complaints-grid"></div>
+        <a href="/users_new.html" class="action-btn">Add New User</a>
+    </div>
+    <script src="/js/utils.js"></script>
+    <script src="/js/complaints.js"></script>
+</body>
+</html>
